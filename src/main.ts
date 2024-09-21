@@ -1,6 +1,9 @@
+/// <reference types="@angular/localize" />
+
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { AppComponent } from './app/app.component';
+import {DisplayCurosityDataComponent} from './app/display-curosity-data/display-curosity-data.component'
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(DisplayCurosityDataComponent, appConfig)
   .catch((err) => console.error(err));

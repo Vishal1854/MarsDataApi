@@ -1,0 +1,28 @@
+<div class="ms-4">
+    <div class="d-flex align-item-center justify-content-center">
+<h1 class="">Mars Images By Curosity Rover</h1>
+</div>
+<div class="d-flex align-item-center justify-content-center mt-3">
+    <button class="btn btn-success" (click)="displayMarsPhotos()">Get Mars Data</button>
+</div>
+<table class="table table-striped align-text-center mt-3  ">
+    <thead>
+        <tr >
+            <th class="p-2">ID</th>
+            <th class="p-2">Camera Name</th>
+            <th class="p-2">Image</th>
+            <th class="p-2">Rover Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of myObj.photos">
+            <td>{{item.id}}</td>
+            <td>{{item.camera.name}}</td>
+            <td>
+                <img [src]="item.img_src" width="100px" height="100px" alt="">
+            </td>
+            <td>{{item.rover.name}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
